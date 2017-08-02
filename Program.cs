@@ -39,7 +39,7 @@ namespace Metainformacion
             {
                 string values = String.Empty;
                 foreach(PropertyInfo prop in generic.type.GetProperties())
-                { if (prop.PropertyType.Name.Equals("String"){
+                { if (prop.PropertyType.Name.Equals("String")){
                        values += "'" + prop.GetValue(generic.obj) + "',";
                     } else
                     {
