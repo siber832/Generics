@@ -39,16 +39,8 @@ namespace Metainformacion
             {
                 string values = String.Empty;
                 foreach(PropertyInfo prop in generic.type.GetProperties())
-                {
-                    //Console.WriteLine("Tipo: " + prop.PropertyType.Name);
-                    //Console.WriteLine("Nombre: " + prop.Name);
-                    //Console.WriteLine("Valor: " + prop.GetValue(generic.obj));
-                    //Console.WriteLine();
-
-                    if (prop.PropertyType.Name.Equals("String"))
-                    {
-                        //values += "\"" + prop.GetValue(generic.obj) + "\",";
-                        values += "'" + prop.GetValue(generic.obj) + "',";
+                { if (prop.PropertyType.Name.Equals("String"){
+                       values += "'" + prop.GetValue(generic.obj) + "',";
                     } else
                     {
                         values += prop.GetValue(generic.obj) + ",";
